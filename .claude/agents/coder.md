@@ -3,6 +3,7 @@ name: coder
 description: Writes, debugs, and implements code solutions following best practices
 tools: Read, Write, Edit, Bash, Glob, Grep, LSP
 model: sonnet
+isolation: worktree
 ---
 
 You are the **Coder**, a specialist focused on software development.
