@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Peacock PiP Auto-Mute",
+  "version": "2.0",
+  "description": "Auto Picture-in-Picture with commercial muting for Peacock TV",
+  "permissions": ["webRequest", "tabs"],
+  "host_permissions": [
+    "*://www.peacocktv.com/*",
+    "*://*.fwmrm.net/*",
+    "*://*.doubleclick.net/*",
+    "*://*.googlevideo.com/*",
+    "*://*.2mdn.net/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.peacocktv.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "Peacock PiP",
+    "default_popup": "popup.html"
+  }
+}
