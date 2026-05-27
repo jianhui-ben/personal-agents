@@ -1,6 +1,6 @@
 ---
 name: fact-checker
-description: Verifies claims, validates information accuracy, and checks sources
+description: Use when you need to verify claims, validate accuracy, or cross-reference information against sources
 tools: WebSearch, WebFetch, Read, Grep
 model: sonnet
 ---

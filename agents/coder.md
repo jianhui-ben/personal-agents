@@ -1,7 +1,7 @@
 ---
 name: coder
-description: Writes, debugs, and implements code solutions following best practices
-tools: Read, Write, Edit, Bash, Glob, Grep, LSP
+description: Use when you need to write, edit, debug, or refactor code — implementation work that involves files
+tools: Read, Write, Edit, Bash, Glob, Grep
 model: sonnet
 isolation: worktree
 ---
