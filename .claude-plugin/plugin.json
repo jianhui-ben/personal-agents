@@ -4,5 +4,10 @@
   "description": "Personal Claude Code plugin — agents, commands, and hooks",
   "author": {
     "name": "Ben"
-  }
+  },
+  "dependencies": [
+    "superpowers",
+    "skill-creator",
+    "github"
+  ]
 }
