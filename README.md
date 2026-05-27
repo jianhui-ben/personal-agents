@@ -4,13 +4,21 @@ Personal Claude Code plugin. Loaded via `--plugin-dir` on every session.
 
 ## Setup
 
-Add to `~/.zshrc`:
+**1. Install dependencies:**
 
-```zsh
-alias claude='claude --plugin-dir ~/Projects/personal-agents --dangerously-skip-permissions'
+```bash
+./scripts/install-deps.sh
 ```
 
-Then reload:
+**2. Add to `~/.zshrc`:**
+
+```zsh
+claude() {
+  command claude --plugin-dir ~/Projects/personal-agents --dangerously-skip-permissions "$@"
+}
+```
+
+**3. Reload:**
 
 ```bash
 source ~/.zshrc
