@@ -4,38 +4,29 @@ Multi-agent system for personal development tasks using Claude Code's native sub
 
 ## Architecture
 
-- **jarvis**: Orchestrates workflows (main entry point)
-- **planner**: Strategic planning and brainstorming
-- **researcher**: Information gathering and analysis
-- **coder**: Code implementation and debugging
+Claude Code itself acts as the orchestrator. Specialist subagents in `.claude/agents/` are delegated to as needed:
+
+- **researcher**: Information gathering, web search, data analysis, source verification
+- **coder**: Code implementation, debugging, and refactoring
 - **fact-checker**: Verification and validation
 - **writer**: Content creation and documentation
 
+For planning, use Claude Code's built-in `/plan` mode.
+
 ## Usage
 
-Run Claude Code from this directory. Jarvis will automatically coordinate specialists based on your request.
+Run Claude Code from this directory and describe what you need. Claude will coordinate specialists automatically, or you can invoke them directly.
 
 ## Examples
 
 ```bash
-# Let Jarvis coordinate agents
-claude "plan a feature, research it, implement, and document"
+# Claude coordinates specialists automatically
+claude "research FastAPI, write example code, verify best practices, and create docs"
 
 # Invoke specific agents directly
-claude "have the planner create a product roadmap"
+claude "have the researcher look into X"
 claude "have the coder write a REST API"
-
-# Complex workflows
-claude "research FastAPI, write example code, verify best practices, and create docs"
 ```
-
-## How It Works
-
-Each agent is a specialized subagent defined in `.claude/agents/`:
-- Agents have specific tools they can use
-- Jarvis uses the Task tool to delegate work
-- Agents work together to complete complex workflows
-- Context passes between agents automatically
 
 ## Future Extensions
 
