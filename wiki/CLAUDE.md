@@ -33,6 +33,7 @@ category: learning | project | reference
 tags: [tag1, tag2]
 last_updated: YYYY-MM-DD
 sources: [source-slug-1, source-slug-2]
+contradictions: []  # optional — list conflicting source slugs when contradiction detected
 ---
 ```
 
@@ -71,7 +72,7 @@ Check for:
 - **Missing cross-references**: pages that should link to each other but don't
 - **Data gaps**: topics where more sources would significantly improve coverage
 
-After lint: append `## [YYYY-MM-DD] lint | <N issues found, N fixed, key suggestions>` to `wiki/log.md`.
+7. Append to `wiki/log.md`: `## [YYYY-MM-DD] lint | <N issues found, N fixed, key suggestions>`
 
 ## Contradiction Handling
 
@@ -82,4 +83,4 @@ When a new source contradicts an existing wiki claim:
 
 ## Deduplication
 
-If the same concept appears under different names across sources, merge into the most canonical page. At the top of the deprecated page, add: `> Merged into [[canonical-page-title]]`. Update all inbound links.
+If the same concept appears under different names across sources, merge into the most canonical page. At the top of the deprecated page, add: `> Merged into [[canonical-page-title]]`. Update all inbound links. Set the deprecated page's `last_updated` to today's date and clear its `sources` list.
