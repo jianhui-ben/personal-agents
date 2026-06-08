@@ -13,3 +13,5 @@ The wiki agent will scan all pages and flag:
 - Data gaps worth investigating
 
 It will also suggest new sources and questions to explore.
+
+Example: `/personal:wiki-lint`

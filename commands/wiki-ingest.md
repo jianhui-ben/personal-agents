@@ -1,6 +1,6 @@
 ---
 description: Ingest a source file into your personal knowledge wiki
-argument-hint: <path-to-source-file>
+argument-hint: "<path-to-source-file>"
 ---
 
 Dispatch the wiki agent to ingest the source at: $ARGUMENTS
