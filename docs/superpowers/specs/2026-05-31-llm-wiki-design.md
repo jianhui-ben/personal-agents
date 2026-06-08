@@ -79,7 +79,7 @@ A single source typically touches 5-15 wiki pages.
 1. Read `wiki/index.md` to find relevant pages
 2. Read those pages
 3. Synthesize an answer with citations
-4. Optionally file the answer back as a new wiki page (valuable analyses shouldn't disappear into chat history)
+4. Offer to file the answer back as a new wiki page — ask the user before writing (valuable analyses shouldn't disappear into chat history)
 
 **Lint** — triggered by "clean up my wiki" or `/personal:wiki-lint`
 1. Scan all pages via index
