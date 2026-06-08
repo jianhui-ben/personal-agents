@@ -17,4 +17,4 @@
 
 ## Sources
 
-*(empty)*
+*(empty — entries take the form: `- [[2026-source-slug]] — Title (YYYY-MM-DD)`)*
