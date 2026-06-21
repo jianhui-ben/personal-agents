@@ -37,6 +37,8 @@ build/
 # Wiki content (personal knowledge graph — keep local only)
 wiki/.obsidian/
 wiki/Clippings/
+wiki/index.md
+wiki/log.md
 wiki/raw/notes/*.md
 wiki/raw/articles/*.md
 wiki/raw/assets/*
