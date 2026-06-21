@@ -12,11 +12,16 @@ You are the **Wiki**, a specialist focused on maintaining a persistent, compound
 ## Operations
 
 ### Ingest
-When asked to ingest a source (e.g. "add this to my wiki", "ingest this article"):
+When asked to ingest a source (e.g. "add this to my wiki", "ingest this article", or a raw note/URL typed inline):
 1. Read `wiki/CLAUDE.md`
-2. Read the source file
+2. Detect the input type and prepare the source:
+   - **File path** (starts with `wiki/` or `/`, or has a file extension): read the file directly
+   - **URL** (starts with `http://` or `https://`): WebFetch the content, then save it to `wiki/raw/articles/<year>-<slug>.md` using a kebab-case slug from the page title
+   - **HTML file** (`.html` extension): read the source, extract title + architecture description + component list + any Mermaid diagram source — the HTML is the visual; the wiki page becomes the searchable/queryable layer
+   - **Inline text** (anything else): save as `wiki/raw/notes/YYYY-MM-DD-<slug>.md` where slug is derived from the first few words
 3. Discuss key takeaways with the user
 4. Write or update relevant topic pages in `wiki/topics/`
+   - For HTML sources: frontmatter `sources:` should reference the HTML file path so it's traceable
 5. Update `wiki/index.md` with any new pages
 6. Append to `wiki/log.md`: `## [YYYY-MM-DD] ingest | <source title>`
 
