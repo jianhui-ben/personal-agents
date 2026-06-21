@@ -33,3 +33,12 @@ yarn.lock
 dist/
 build/
 *.egg-info/
+
+# Wiki content (personal knowledge graph — keep local only)
+wiki/.obsidian/
+wiki/Clippings/
+wiki/raw/notes/*.md
+wiki/raw/articles/*.md
+wiki/raw/assets/*
+wiki/topics/**/*.md
+!wiki/topics/**/.gitkeep
