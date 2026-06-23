@@ -15,7 +15,8 @@ wiki/
 │   ├── notes/         # anything you wrote or transcribed: session notes, book highlights,
 │   │                  #   course/lecture notes, YouTube transcripts, interview-prep notes
 │   └── assets/        # any visual/binary files: images, screenshots, HTML diagrams,
-│                      #   architecture recap pages
+│   │                  #   architecture recap pages
+│   │   └── diagrams/  # symlink → ~/.agent/diagrams (auto-populated by /visual-explainer)
 └── topics/
     ├── learning/      # personal learning topics
     ├── projects/      # per-project context and research findings
@@ -60,7 +61,8 @@ How to get different content types into the wiki:
 | Book highlights | Export highlights as markdown; ingest the file | `raw/notes/` |
 | YouTube video | Paste transcript or your notes; ingest inline or as file | `raw/notes/` |
 | Session insight | `/personal:wiki-ingest "your insight here"` (inline text) | `raw/notes/` (auto-saved) |
-| HTML diagram / screenshot | Save to `raw/assets/`; ingest the file path | `raw/assets/` |
+| `/visual-explainer` output | Already in `raw/assets/diagrams/` via symlink — just ingest | `raw/assets/diagrams/` |
+| Other HTML diagram / screenshot | Save to `raw/assets/`; ingest the file path | `raw/assets/` |
 
 For interview prep, use `learning/` category with tags like `[interview-prep, system-design, algorithms]`.
 
@@ -95,6 +97,7 @@ Check for:
 - **Missing pages**: concepts mentioned in `[[links]]` but lacking their own page
 - **Missing cross-references**: pages that should link to each other but don't
 - **Data gaps**: topics where more sources would significantly improve coverage
+- **Uningestted diagrams**: glob `wiki/raw/assets/diagrams/*.html`, cross-reference against `wiki/log.md` ingest entries — any file not yet ingested should be listed with its ready-to-run ingest command
 
 7. Append to `wiki/log.md`: `## [YYYY-MM-DD] lint | <N issues found, N fixed, key suggestions>`
 

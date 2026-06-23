@@ -38,5 +38,6 @@ When asked to health-check the wiki (e.g. "clean up my wiki", "lint the wiki"):
 1. Read `wiki/CLAUDE.md`
 2. Read `wiki/index.md`, then scan all topic pages
 3. Flag contradictions, stale claims, orphan pages, missing cross-references, concepts without their own page
-4. Suggest new topics to investigate and sources to look for
-5. Append to `wiki/log.md`: `## [YYYY-MM-DD] lint | <summary>`
+4. Glob `wiki/raw/assets/diagrams/*.html` and cross-reference against `wiki/log.md` ingest entries — for each HTML file not yet ingested, output the ready-to-run command: `/personal:wiki-ingest wiki/raw/assets/diagrams/<filename>`
+5. Suggest new topics to investigate and sources to look for
+6. Append to `wiki/log.md`: `## [YYYY-MM-DD] lint | <summary>`
