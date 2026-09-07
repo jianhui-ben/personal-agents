@@ -1,0 +1,14 @@
+{
+  "name": "personal-agents",
+  "owner": {
+    "name": "Ben"
+  },
+  "description": "Local marketplace for Ben's personal Claude Code plugin",
+  "plugins": [
+    {
+      "name": "personal",
+      "source": "./",
+      "description": "Personal Claude Code plugin — agents, commands, and hooks"
+    }
+  ]
+}
