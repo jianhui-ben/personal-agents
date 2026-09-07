@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "PiP Toggle — Floating Video Window",
+  "version": "1.2",
+  "description": "Click the icon to pop the video into a small floating window that stays on top of other apps (Picture-in-Picture), so you can watch a live game while you work. Click again to put it back. Works on YouTube TV, Peacock, and most video sites.",
+  "permissions": ["scripting", "activeTab"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Toggle floating video (Picture-in-Picture)"
+  }
+}
